@@ -1,3 +1,0 @@
-a: 5
-b: !include b.yml
-c: !include c.yml

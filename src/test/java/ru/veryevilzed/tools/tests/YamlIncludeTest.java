@@ -15,7 +15,7 @@ public class YamlIncludeTest {
 
     @Test
     public void testInclude() throws IOException {
-        File file = Paths.get("examples","a.yml").toFile();
+        File file = Paths.get("examples","root/a.yml").toFile();
         final Yaml yaml = new Yaml(new YamlResourcesIncludingConstructor(file.getParent()));
         Map<String, Object> m = yaml.loadAs(FileUtils.openInputStream(file), Map.class);
         Assert.assertEquals(m.get("a"), 5);
